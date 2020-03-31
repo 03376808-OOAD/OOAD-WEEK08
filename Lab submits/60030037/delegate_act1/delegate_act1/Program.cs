@@ -9,7 +9,7 @@ namespace delegate_act1
     {
         static void Main(string[] args)
         {
-            addDel adel = delegate(int a, int b){
+            addDel adel = (int a, int b)=>{
                 return a + b;
             };
             Console.WriteLine("result = {0}",adel(2,3));
