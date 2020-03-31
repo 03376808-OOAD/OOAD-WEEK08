@@ -10,12 +10,10 @@ namespace delegate_act1
     {
         static void Main(string[] args)
         {
-            addDel adel = (int a, int b)=>{
-                return a + b;
-            };
+            addDel adel = (int a, int b) => { return a + b; }; //Lambda Expression
             Console.WriteLine("result = {0}",adel(2,3));
 
-            xDel x = (int x) => { return x + 3; };
+            xDel x = x => x + 3; //Lambda Expression
             Console.WriteLine("Result of xDel = {0}",x(5));
         }
     }
