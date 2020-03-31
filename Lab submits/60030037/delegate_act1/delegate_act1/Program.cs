@@ -9,7 +9,7 @@ namespace delegate_act1
         {
             deleHello delH = hello;
             deleHello delG = goodbye;
-            deleHello delX = delH + delG;
+            deleHello delX = delH + delG + delH + delG;
             delX("ha ha ha.");
         }
 
