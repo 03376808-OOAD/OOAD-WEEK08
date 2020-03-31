@@ -2,11 +2,13 @@
 
 namespace delegate_act1
 {
+    delegate void deleHello();
     class Program
     {
         static void Main(string[] args)
         {
-            hello();
+            deleHello delH = hello;
+            delH();
         }
 
         public static void hello()
