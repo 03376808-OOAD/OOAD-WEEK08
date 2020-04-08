@@ -8,7 +8,7 @@ namespace delegate_act4
     {
         static void Main(string[] args)
         {
-            addDel aDel = delegate (int a, int b) { return a + b; };
+            addDel aDel = (int a, int b) => { return a + b; };
             Console.WriteLine("result={0}",aDel(2,3));
         }
     }
