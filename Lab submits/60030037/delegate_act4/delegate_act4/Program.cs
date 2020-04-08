@@ -3,6 +3,7 @@
 namespace delegate_act4
 {
     //Anonymous method
+    delegate int addDel(int a, int b);
     class Program
     {
         public static int add(int a,int b)
@@ -11,7 +12,8 @@ namespace delegate_act4
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("result={0}",add(2,3));
+            addDel aDel = add;
+            Console.WriteLine("result={0}",aDel(2,3));
         }
     }
 }
