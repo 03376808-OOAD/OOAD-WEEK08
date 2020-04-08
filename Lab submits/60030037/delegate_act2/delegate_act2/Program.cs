@@ -8,19 +8,20 @@ namespace delegate_act2
         static void Main(string[] args)
         {
             deleHello delH = hello;
-            delH("Sawasdee krub.");
             deleHello delG = goodbye;
-            delG("bye bye.");
+
+            deleHello delX = delH + delG + delH + delG;
+            delX("ha ha ha.");
         }
 
         public static void hello(string value)
         {
-            Console.WriteLine(value);
+            Console.WriteLine("From Hello : {0}",value);
         }
 
         public static void goodbye(string value)
         {
-            Console.WriteLine(value);
+            Console.WriteLine("From Goodbye : {0}",value);
         }
     }
 }
