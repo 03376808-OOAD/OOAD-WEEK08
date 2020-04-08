@@ -10,7 +10,14 @@ namespace delegate_act3
         {
             delMove L = turnLeft;
             delMove R = turnRight;
-            delMove gotoSchool = L + L + R + R + L + L + R + L;
+            delMove gotoSchool = L;
+            gotoSchool += L;
+            gotoSchool += R;
+            gotoSchool += R;
+            gotoSchool += L;
+            gotoSchool += L;
+            gotoSchool += R;
+            gotoSchool += L;
             gotoSchool();
         }
         static public void turnLeft()
