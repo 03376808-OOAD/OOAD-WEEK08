@@ -11,7 +11,7 @@ namespace delegate_act4
         {
             addDel aDel = (int a, int b) => { return a + b; };
             Console.WriteLine("Result = {0}",aDel(2,3));
-            xDel x = x => { return x + 3; };
+            xDel x = x =>  x + 3;
             Console.WriteLine("Result of xDel = {0}",x(5));
         }
     }
