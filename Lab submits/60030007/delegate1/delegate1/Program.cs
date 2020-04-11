@@ -2,23 +2,40 @@
 
 namespace delegate1
 {
-    delegate void deleHello(string value);
+    delegate void delMove();
     class Program
     {
         static void Main(string[] args)
         {
-            deleHello delH = hello;
-            deleHello delG = goodbye;
-            deleHello delX = delH + delG + delH + delG;
-            delX("ha ha ha ");       
+            delMove L = turnLeft;
+            delMove R = turnRight;
+            delMove gotoSchool = L ;
+            delMove[] arrdel = new delMove[10];
+            arrdel[0] = L;
+            arrdel[1] = R;
+            arrdel[2] = L;
+            arrdel[3] = L;
+            arrdel[4] = R;
+            arrdel[5] = L;
+            arrdel[6] = R;
+            arrdel[7] = L;
+            arrdel[8] = L;
+            arrdel[9] = R;
+
+            foreach (delMove x in arrdel)
+            {
+                gotoSchool += x;
+            }
+
+            gotoSchool();
         }
-        public static void hello(string value)
+        static public void turnLeft()
         {
-            Console.WriteLine("From Hello : {0}", value);
+            Console.WriteLine("Turn Left.");
         }
-        public static void goodbye(string value)
+        static public void turnRight() 
         {
-            Console.WriteLine("From Goodbye : {0}", value);
+            Console.WriteLine("Turn Right.");
         }
     }
 }
