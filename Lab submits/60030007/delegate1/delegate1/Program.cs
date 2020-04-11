@@ -2,40 +2,20 @@
 
 namespace delegate1
 {
-    delegate void delMove();
+    delegate int addDel(int a, int b);
+    delegate int xDel(int x);
     class Program
     {
+        
         static void Main(string[] args)
         {
-            delMove L = turnLeft;
-            delMove R = turnRight;
-            delMove gotoSchool = L ;
-            delMove[] arrdel = new delMove[10];
-            arrdel[0] = L;
-            arrdel[1] = R;
-            arrdel[2] = L;
-            arrdel[3] = L;
-            arrdel[4] = R;
-            arrdel[5] = L;
-            arrdel[6] = R;
-            arrdel[7] = L;
-            arrdel[8] = L;
-            arrdel[9] = R;
+            addDel adel = (int a, int b) =>{ return a + b;};
+            Console.WriteLine("result = {0}", adel(2, 3));
 
-            foreach (delMove x in arrdel)
-            {
-                gotoSchool += x;
-            }
-
-            gotoSchool();
+            xDel x = x =>  x + 3;  
+            Console.WriteLine("Result of xDel = {0}", x(5));
         }
-        static public void turnLeft()
-        {
-            Console.WriteLine("Turn Left.");
-        }
-        static public void turnRight() 
-        {
-            Console.WriteLine("Turn Right.");
-        }
+        
+        
     }
 }
